@@ -47,6 +47,16 @@ Advanced text editors with reStructuredText support, IDEs, and docutils GUIs:
 
   __ http://resteditor.sf.net/
 
+* Gnome's gedit offers syntax highlighting and a reST preview pane.
+
+  Latest version of the plugin is available from `bittner @ github`_
+  (See also: `Gedit third party plugins`__).
+
+  __ https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins-v3.8
+
+  .. _bittner @ github:  https://github.com/bittner/gedit-reST-plugin
+
+
 * Gunnar Schwant's DocFactory_ is a wxPython GUI application for
   Docutils.
 
@@ -65,6 +75,8 @@ Advanced text editors with reStructuredText support, IDEs, and docutils GUIs:
 * `NoTex <https://notex.ch>`_ is a browser based reStructuredText editor
   with syntax highlighting and PDF/HTML export functionality using Sphinx.
 
+* `rsted <https://github.com/anru/rsted>`_ is a "simple online editor for
+  reStructuredText on Flask". You can try it on http://rst.ninjs.org/ 
 
 Export
 ------
@@ -246,6 +258,9 @@ Applications using docutils/reStructuredText and helper applications.
 
 * For Blogs (Weblogs), please see the `FAQ entry about Blogs`_.
 
+* `Project Gutenberg`_ uses docutils, but with it's own xetex- and nroff-writer
+  and epub.
+
 Development
 ```````````
 
@@ -338,3 +353,4 @@ Presentations
 .. _Texinfo Writer: http://docutils.sf.net/sandbox/texinfo-writer/README.html
 .. _confluence CMS: http://www.atlassian.com/software/confluence
 .. _rst2blogger: https://github.com/dhellmann/rst2blogger#readme
+.. _Project Gutenberg: http://www.gutenberg.org

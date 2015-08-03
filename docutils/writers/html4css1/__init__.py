@@ -1047,9 +1047,9 @@ class HTMLTranslator(nodes.NodeVisitor):
                     self.settings.record_dependencies.add(
                         imagepath.replace('\\', '/'))
                     if 'width' not in atts:
-                        atts['width'] = str(img.size[0])
+                        atts['width'] = '%dpx' % img.size[0]
                     if 'height' not in atts:
-                        atts['height'] = str(img.size[1])
+                        atts['height'] = '%dpx' % img.size[1]
                     del img
             for att_name in 'width', 'height':
                 if att_name in atts:
@@ -1245,10 +1245,12 @@ class HTMLTranslator(nodes.NodeVisitor):
                                            suffix='\n'*bool(math_env),
                                            CLASS=clsarg))
         self.body.append(math_code)
-        if math_env:
+        if math_env: # block mode (equation, display)
             self.body.append('\n')
         if tag:
-            self.body.append('</%s>\n' % tag)
+            self.body.append('</%s>' % tag)
+        if math_env:
+            self.body.append('\n')
         # Content already processed:
         raise nodes.SkipNode
 
